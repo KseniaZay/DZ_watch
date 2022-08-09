@@ -1,0 +1,63 @@
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+.container {
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+img {
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+}
+.clock {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+}    
+.sec,
+.min,
+.hour {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 50%;
+    width: 20px;
+    transform-origin: 50% 100%;
+}
+.sec {
+    animation: sec 60s linear infinite;
+}
+@keyframes sec {
+    0%{
+        transform: translate(-50%, 0) rotate(0);
+    }
+    100%{
+        transform: translate(-50%, 0) rotate(360deg);
+    }
+}
+.min {
+    animation: min 3600s linear infinite;
+}
+@keyframes min {
+    0%{
+        transform: translate(-50%, 0) rotate(0);
+    }
+    100%{
+        transform: translate(-50%, 0) rotate(360deg);
+    }
+}
+.hour {
+    animation: min 43200s linear infinite;
+}
+@keyframes min {
+    0%{
+        transform: translate(-50%, 0) rotate(0);
+    }
+    100%{
+        transform: translate(-50%, 0) rotate(360deg);
+    }
+}    
